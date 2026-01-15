@@ -1,0 +1,50 @@
+.features {
+   .featureDivider{
+      margin: 1rem 0 2rem 0;
+   }
+   
+   .feature {
+      padding: 2rem 0;
+   }
+
+   .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+         font-family: "Zalando Sans Expanded", sans-serif;
+         text-transform: capitalize;
+         font-weight: 700;
+      }
+
+      p {
+         font-size: 1rem;
+      }
+
+      .featureBtn {
+         width: fit-content;
+         display: inline-block;
+         color: var(--white);
+         background-color: var(--primary-color);
+         padding: 0.8rem 1.5rem;
+         border-radius: 10rem;
+         font-weight: 600;
+         text-transform: capitalize;
+         transition: all .3s ease;
+
+         &:hover {
+            color: var(--primary-color);
+            background-color: var(--white);
+            outline: 1px solid rgba(0, 0, 0, .2);
+         }
+      }
+   }
+
+   .featureImg {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+}

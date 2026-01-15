@@ -1,0 +1,192 @@
+header nav {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   right: 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1.5rem 6.5rem;
+   z-index: 10;
+   transition: all .3s ease;
+}
+
+.scrolled {
+   padding: 1.5rem 5rem;
+   background-color: var(--white);
+   box-shadow: 0px 0.5rem 0.5rem -0.5rem rgba(0, 0, 0, .1);
+}
+
+.backdrop {
+   display: none;
+}
+
+.logo {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+
+   img {
+      max-width: 100%;
+      width: 3rem;
+      height: auto;
+   }
+
+   h2 {
+      font-family: "Zalando Sans Expanded", sans-serif;
+      font-weight: 600;
+      color: black;
+      margin-bottom: 0;
+   }
+}
+
+.navLinks {
+   display: flex;
+   align-items: center;
+   margin: auto 0;
+   gap: 2rem;
+}
+
+.navLinks li a {
+   color: var(--text-dark);
+   font-size: 1rem;
+   font-weight: 600;
+   text-transform: uppercase;
+   transition: .3s all ease;
+}
+
+.navLinks li a:hover {
+   opacity: .7;
+}
+
+/* singup button when page isn't scrolled..  */
+.navLinks li a.contact {
+   color: var(--primary-color);
+   background-color: var(--white);
+   padding: 0.8rem 1.5rem;
+   border-radius: 10rem;
+   font-weight: 600;
+   text-transform: capitalize;
+   opacity: 1 !important;
+
+   &:hover {
+      opacity: 1 !important;
+      color: var(--white);
+      background-color: var(--primary-color);
+      outline: 1px solid var(--white);
+   }
+}
+
+/* singup button when page is scrolled..  */
+.navLinks li a.contactScrolled {
+   color: var(--white);
+   background-color: var(--primary-color);
+   padding: 0.8rem 1.5rem;
+   border-radius: 10rem;
+   font-weight: 600;
+   text-transform: capitalize;
+   opacity: 1 !important;
+
+   &:hover {
+      opacity: 1 !important;
+      color: var(--primary-color);
+      background-color: var(--white);
+      outline: 1px solid rgba(0, 0, 0, .2);
+   }
+}
+
+
+#menuIcon {
+   font-size: 2rem;
+   color: var(--text-dark);
+   z-index: 10;
+   cursor: pointer;
+   display: none;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+   .logoImg {
+      img {
+         max-width: 100%;
+         width: 8rem;
+         height: auto;
+      }
+
+      /* h2{
+
+      } */
+   }
+
+   header nav {
+      padding: 2rem 2rem;
+   }
+
+   .navLinks {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: -100vw;
+      bottom: 0;
+      width: 250px;
+      height: 100vh;
+      background: #484848;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      padding: 8rem 2rem 0;
+      transition: all .3s ease;
+
+      li a {
+         color: var(--white);
+      }
+   }
+
+   #menuIcon {
+      display: block;
+   }
+
+   .signUp {
+      display: none;
+   }
+
+   /* changing color of menu icon  */
+   .colorChange {
+      color: var(--white);
+   }
+
+   /* setting right property to 0 when menu button is clicked  */
+   .menuOpen {
+      right: -1rem;
+   }
+
+   .scrolled {
+      padding: 1.5rem 2rem;
+   }
+
+
+   .backdrop {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+      z-index: -1;
+
+      opacity: 0;
+      pointer-events: none;
+
+      transition: all 0.3s ease;
+   }
+
+   .backdrop.show {
+      opacity: 1;
+      pointer-events: auto;
+   }
+}
+
+@media (max-width: 1199.98px) {
+   .navLinks {
+      gap: 1.5rem;
+   }
+}
