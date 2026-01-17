@@ -24,9 +24,9 @@ const HeroSection = () => {
         </div>
         <div className={clsx(styles.heroContent, "container")}>
 
-          <div className={clsx(styles.heroText, 'col-5')}>
+          <div className={clsx(styles.heroText, 'col-lg-6 col-12')}>
             <h1>simplified <br />productivity <br />app for all.</h1>
-            <p>frybix is a hub for managing productivity tasks professionaly and efficiently</p>
+            <p className={styles.heroDesc}>frybix is a hub for managing productivity tasks professionaly and efficiently</p>
 
             <div className={styles.mailSection}>
               <input type="email" placeholder="user@example.com" ref={newsLetterRef} />
@@ -71,7 +71,7 @@ const HeroSection = () => {
 
         </div>
 
-        <div className={styles.heroImage}>
+        <div className={clsx(styles.heroImage, 'd-lg-block d-none')}>
           <img src={heroDashboard} alt="img" />
         </div>
 

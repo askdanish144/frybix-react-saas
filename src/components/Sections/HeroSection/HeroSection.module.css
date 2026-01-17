@@ -22,8 +22,9 @@
       font-family: "Zalando Sans Expanded", sans-serif;
       text-transform: capitalize;
       font-weight: 700;
-      font-size: 3.3rem;
-      line-height: 4rem;
+      /* font-size: 3.3rem; */
+      font-size: clamp(2.5rem, 3vw + 1.5rem, 3.3rem);
+      line-height: 1.3em;
    }
 
    p {
@@ -144,5 +145,65 @@
    right: 0;
    width: 700px;
    height: 700px;
-   z-index: 1;
+   z-index: -10;
+}
+
+/* Responsiveness */
+@media (max-width: 1199.98px) {
+   .heroImage {
+      img {
+         max-width: 640px;
+      }
+   }
+}
+
+@media (max-width: 767.98px) {
+   .hero {
+      padding-top: 3rem;
+   }
+
+   .heroBgShape {
+      top: 0rem;
+      right: 0px;
+      width: 350px;
+   }
+
+   /* .heroText {
+      align-items: center;
+
+      .heroDesc {
+         padding: 0 3rem;
+      }
+   } */
+}
+
+@media (max-width: 575.98px) {
+   .heroBgShape {
+      top: 0rem;
+      right: -200px;
+      width: 400px;
+   }
+
+   .hero {
+      padding-top: 0rem;
+   }
+
+   .mailSection {
+      width: 100% !important;
+   }
+
+   .ratingSection {
+      width: 100%;
+   }
+}
+
+@media (max-width: 399.98px) {
+   .ratingSection {
+      width: 90%;
+      margin: auto;
+   }
+
+   .customers img {
+      display: none;
+   }
 }
