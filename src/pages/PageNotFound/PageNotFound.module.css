@@ -1,0 +1,169 @@
+.pageNotFound {
+   height: 70vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 2rem;
+   position: relative;
+   overflow: hidden;
+   margin-top: 8rem;
+   margin-bottom: 4rem;
+}
+
+.container {
+   position: relative;
+   z-index: 2;
+   max-width: 600px;
+   width: 100%;
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   gap: 1rem;
+}
+
+.errorCode {
+   position: relative;
+   margin-bottom: .5rem;
+}
+
+.errorCode h1 {
+   font-family: "Zalando Sans Expanded", sans-serif;
+   font-size: 8rem;
+   font-weight: 900;
+   background: linear-gradient(135deg, #6640FF 0%, #fb923c 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   line-height: 1;
+   margin: 0;
+   text-shadow: 0 10px 30px rgba(102, 64, 255, 0.2);
+   letter-spacing: -2px;
+}
+
+.textContent {
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+}
+
+.textContent h2 {
+   font-family: "Zalando Sans Expanded", sans-serif;
+   font-size: 2.5rem;
+   font-weight: 700;
+   color: #333333;
+   margin: 0;
+   text-transform: capitalize;
+}
+
+.textContent p {
+   font-size: 1.1rem;
+   color: #767268;
+   margin: 0;
+   line-height: 1.6;
+   max-width: 500px;
+}
+.actions {
+   display: flex;
+   gap: 1rem;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-top: .5rem;
+}
+
+.primaryBtn,
+.secondaryBtn {
+   padding: 0.9rem 2rem;
+   border-radius: 10rem;
+   font-weight: 600;
+   text-transform: capitalize;
+   transition: all 0.3s ease;
+   display: inline-block;
+   cursor: pointer;
+   border: none;
+   text-decoration: none;
+   font-size: 1rem;
+   font-family: "Poppins", sans-serif;
+}
+
+.primaryBtn {
+   color: white;
+   background: linear-gradient(135deg, #6640FF 0%, #5531dd 100%);
+   box-shadow: 0 4px 15px rgba(102, 64, 255, 0.3);
+}
+
+.primaryBtn:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 8px 25px rgba(102, 64, 255, 0.4);
+   background: linear-gradient(135deg, #5531dd 0%, #4422cc 100%);
+}
+
+.secondaryBtn {
+   color: #6640FF;
+   background: white;
+   outline: 2px solid #6640FF;
+}
+
+.secondaryBtn:hover {
+   background: #6640FF;
+   color: white;
+   transform: translateY(-2px);
+   box-shadow: 0 8px 25px rgba(102, 64, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   .errorCode h1 {
+      font-size: 5rem;
+      letter-spacing: -1px;
+   }
+
+   .textContent h2 {
+      font-size: 2rem;
+   }
+
+   .textContent p {
+      font-size: 1rem;
+   }
+
+   .illustration {
+      width: 140px;
+      height: 140px;
+   }
+
+   .actions {
+      flex-direction: column;
+      gap: 0.8rem;
+   }
+
+   .primaryBtn,
+   .secondaryBtn {
+      width: 100%;
+   }
+}
+
+@media (max-width: 480px) {
+   .pageNotFound {
+      padding: 1.5rem;
+   }
+
+   .errorCode h1 {
+      font-size: 4rem;
+   }
+
+   .textContent h2 {
+      font-size: 1.5rem;
+   }
+
+   .textContent p {
+      font-size: 0.95rem;
+   }
+
+   .illustration {
+      width: 120px;
+      height: 120px;
+   }
+}

@@ -28,13 +28,19 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
+  /* user-select: none; */
 }
 
 a {
   text-decoration: none;
 }
 
-input:focus{
+input:focus {
   outline: none;
-  border: none;
+  /* border: none; */
+}
+
+ol, ul{
+  margin: 0;
+  padding: 0;
 }

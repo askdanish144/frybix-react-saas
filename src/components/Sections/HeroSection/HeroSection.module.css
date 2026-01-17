@@ -52,6 +52,9 @@
          border-radius: 50%;
          color: white;
          box-shadow: 2px 2px 10px -5px black;
+         display: flex;
+         justify-content: center;
+         align-items: center;
       }
    }
 
@@ -82,6 +85,7 @@
       }
 
       h3 {
+         font-size: 1.6rem;
          font-weight: 600;
          margin-bottom: .1rem;
       }
@@ -99,8 +103,21 @@
 
    .rating {
       h3 {
+         font-size: 1.6rem;
          font-weight: 600;
          margin-bottom: .1rem;
+      }
+
+      .ratingStarsWrap {
+         display: flex;
+         align-items: center;
+         gap: .5rem;
+      }
+
+      .ratingStars {
+         display: flex;
+         color: var(--primary-color);
+         font-size: .9rem;
       }
 
       p {
@@ -122,10 +139,10 @@
 }
 
 .heroBgShape {
-  position: absolute;
-  top: -3rem;
-  right: 0;
-  width: 700px;
-  height: 700px;
-  z-index: 1;
+   position: absolute;
+   top: -3rem;
+   right: 0;
+   width: 700px;
+   height: 700px;
+   z-index: 1;
 }

@@ -4,12 +4,18 @@ import img from '../../../assets/onePlatform/one-platform.svg';
 import cardImg1 from '../../../assets/onePlatform/1.svg';
 import cardImg2 from '../../../assets/onePlatform/2.svg';
 import cardImg3 from '../../../assets/onePlatform/3.svg';
+import { useLocation } from 'react-router-dom';
 
 const OnePlatform = () => {
+   const { pathname } = useLocation();
+   const isValues = pathname === '/values';
    return (
       <>
          <section>
-            <div className={clsx(styles.onePlatform, "container")}>
+            <div
+               className={clsx(styles.onePlatform, "container")}
+               style={isValues ? { marginTop: '8rem', marginBottom: '4rem' } : {}}
+            >
                <h2>one platform for any business</h2>
 
                <div className={styles.onePlatformContent}>
@@ -39,7 +45,7 @@ const OnePlatform = () => {
                   </div>
 
                   <div className="image">
-                     <img src={img} alt="img" />
+                     <img src={img} alt="img" className={styles.onePlatformImg} />
                   </div>
 
                </div>

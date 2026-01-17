@@ -6,8 +6,10 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const { pathname } = useLocation();
+  const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState(false);
+
 
   const handlePageScroll = (path) => {
     if (pathname === path) {
@@ -63,18 +65,48 @@ const Navbar = () => {
   return (
     <>
       <header>
-        <nav className={clsx(scrolled ? styles.scrolled : null)}>
+        <nav 
+          className={clsx(scrolled && isHome ? styles.scrolled : null)}
+          style={!isHome ? { backgroundColor: "var(--white)" } : {}}
+        >
+          
           <Link className={styles.logo} to="/" onClick={() => handlePageScroll('/')}>
             <img src={logo} alt="logo" />
             <h2>FryBix</h2>
           </Link>
 
           <ul className={clsx(styles.navLinks, active && styles.menuOpen)}>
-            <li><Link to="/" style={!scrolled ? { color: "var(--white)" } : {}} onClick={() => handlePageScroll('/')}>Home</Link></li>
-            <li><Link to="/about" style={!scrolled ? { color: "var(--white)" } : {}} onClick={() => handlePageScroll('/about')}>About</Link></li>
-            <li><Link to="/pricing" style={!scrolled ? { color: "var(--white)" } : {}} onClick={() => handlePageScroll('/pricing')}>Pricing</Link></li>
-            <li><Link to="/feature" style={!scrolled ? { color: "var(--white)" } : {}} onClick={() => handlePageScroll('/feature')}>Feature</Link></li>
-            <li><Link to="/contact" className={clsx(scrolled ? styles.contactScrolled : styles.contact)}>Contact</Link>
+            <li><Link
+              to="/"
+              style={!scrolled && isHome ? { color: "var(--white)" } : {}
+              }
+              onClick={() => handlePageScroll('/')}>Home</Link>
+            </li>
+
+            <li><Link
+              to="/features"
+              style={!scrolled && isHome ? { color: "var(--white)" } : {}
+              }
+              onClick={() => handlePageScroll('/features')}>Features</Link>
+            </li>
+
+            <li><Link
+              to="/segments"
+              style={!scrolled && isHome ? { color: "var(--white)" } : {}
+              }
+              onClick={() => handlePageScroll('/segments')}>Segments</Link>
+            </li>
+
+            <li><Link
+              to="/values"
+              style={!scrolled && isHome ? { color: "var(--white)" } : {}
+              }
+              onClick={() => handlePageScroll('/values')}>Values</Link>
+            </li>
+
+            <li><Link
+              to="/contact"
+              className={clsx(!scrolled && isHome ? styles.contact : styles.contactScrolled)}>Contact</Link>
             </li>
           </ul>
 

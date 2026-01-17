@@ -1,5 +1,4 @@
 .onePlatform {
-   /* padding: 2.5rem 0; */
 
    h2 {
       font-family: "Zalando Sans Expanded", sans-serif;
@@ -13,6 +12,7 @@
    .onePlatformContent {
       display: flex;
       justify-content: space-between;
+      position: relative;
    }
 
    .cards {
@@ -28,9 +28,14 @@
       align-items: center;
       gap: 1rem;
       background-color: white;
-      box-shadow: 0.1rem 0.5rem 2.5rem -2.5rem black;
+      box-shadow: rgba(100, 100, 111, 0.15) 0px 7px 29px -10px;
       padding: 1rem;
       border-radius: 1.5rem;
+      transition: all .3s ease;
+
+      &:hover {
+         scale: 1.025;
+      }
 
       h3 {
          text-transform: capitalize;
@@ -43,5 +48,11 @@
          opacity: .8;
          font-size: .9rem;
       }
+   }
+
+   .onePlatformImg {
+      position: absolute;
+      right: -180px;
+      z-index: 2;
    }
 }
