@@ -8,32 +8,32 @@ import { useLocation } from 'react-router-dom';
 const cardsData = [
    {
       img: cardImg1,
-      heading: "Appointment",
+      heading: "education system",
       para: "Many desktop publishing packages and web page editors now use for them.",
    },
    {
       img: cardImg2,
-      heading: "Appointment",
+      heading: "sports & fitness",
       para: "Many desktop publishing packages and web page editors now use for them.",
    },
    {
       img: cardImg3,
-      heading: "Appointment",
+      heading: "beauty & wellness",
       para: "Many desktop publishing packages and web page editors now use for them.",
    },
    {
       img: cardImg3,
-      heading: "Appointment",
+      heading: "officials & financial",
       para: "Many desktop publishing packages and web page editors now use for them.",
    },
    {
       img: cardImg2,
-      heading: "Appointment",
+      heading: "medical services",
       para: "Many desktop publishing packages and web page editors now use for them.",
    },
    {
       img: cardImg1,
-      heading: "Appointment",
+      heading: "events & entertainment",
       para: "Many desktop publishing packages and web page editors now use for them.",
    },
 ];
@@ -48,13 +48,13 @@ const BusinessSegments = () => {
             className={(styles.businessSegments)}
             style={isSegments ? { marginTop: '8rem', marginBottom: '4rem' } : {}}
          >
-            <div className="container">
-               <h2>Frybix has the ability to serve any <br /> business segment</h2>
+            <div className={clsx(styles.cardsWrap, "container")}>
+               <h2>Elevating every industry</h2>
                <div className={clsx(styles.cards, "row g-3")}>
 
                   {
                      cardsData.map((obj, ind) => (
-                        <div className="col-4" key={ind}>
+                        <div className="col-12 col-md-6 col-lg-4" key={ind}>
                            <div className={styles.cardItem}>
                               <img src={obj.img} alt="img" />
                               <div>

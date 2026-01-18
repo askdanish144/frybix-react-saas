@@ -2,7 +2,7 @@
 } */
 
 .footerContent {
-   padding: 3rem 0 0 0;
+   padding: 4rem 0 2rem 0;
 }
 
 .logo {
@@ -13,6 +13,14 @@
    h3 {
       font-family: "Zalando Sans Expanded", sans-serif;
       font-size: 1.5rem;
+      margin-bottom: 0;
+   }
+}
+
+.footerPara {
+   margin: 1rem 0 .5rem 0;
+
+   p {
       margin-bottom: 0;
    }
 }

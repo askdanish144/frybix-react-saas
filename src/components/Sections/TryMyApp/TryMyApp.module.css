@@ -9,18 +9,20 @@
    align-items: center;
    gap: .25rem;
    padding: 6rem 0;
+   position: relative;
+   z-index: 1;
 
    h2 {
       font-family: "Zalando Sans Expanded", sans-serif;
       font-weight: 700;
       text-align: center;
-      font-size: 2.5rem;
+      font-size: clamp(1rem, 1.5rem + 2vw, 2.5rem);
       text-transform: capitalize;
    }
 
    p {
       text-align: center;
-      font-size: 1.2rem;
+      font-size: clamp(.8rem, .8rem + 2vw, 1rem);
    }
 
    .featureBtn {
@@ -42,17 +44,49 @@
    }
 }
 
-.leftRightGraphics{
-   .leftImg{
+.leftRightGraphics {
+   .leftImg {
       position: absolute;
       top: 0;
       left: 0;
       max-width: 450px;
    }
-   .rightImg{
+
+   .rightImg {
       position: absolute;
       right: 0;
       bottom: 0;
       max-width: 450px;
+   }
+}
+
+/* Responsiveness */
+@media (max-width: 991.98px) {
+   .leftRightGraphics {
+
+      .leftImg,
+      .rightImg {
+         max-width: 400px;
+      }
+   }
+}
+
+@media (max-width: 767.98px) {
+   .leftRightGraphics {
+
+      .leftImg,
+      .rightImg {
+         max-width: 350px;
+      }
+   }
+}
+
+@media (max-width: 575.98px) {
+   .leftRightGraphics {
+
+      .leftImg,
+      .rightImg {
+         max-width: 250px;
+      }
    }
 }

@@ -105,6 +105,12 @@ header nav {
 }
 
 /* Responsive */
+@media (max-width: 1199.98px) {
+   .navLinks {
+      gap: 2rem;
+   }
+}
+
 @media (max-width: 991.98px) {
    .logoImg {
       img {
@@ -130,16 +136,23 @@ header nav {
       bottom: 0;
       width: 250px;
       height: 100vh;
-      background: #484848;
+      background: linear-gradient(120deg, rgb(100, 81, 175), #a48ef8);
       display: flex;
       flex-direction: column;
       align-items: start;
-      padding: 8rem 2rem 0;
+      padding: 10rem 2rem 0;
       transition: all .3s ease;
 
       li a {
          color: var(--white);
       }
+   }
+
+   .navLinks li a.contact,
+   .navLinks li a.contactScrolled {
+      color: white;
+      background-color: transparent;
+      padding: 0;
    }
 
    #menuIcon {
@@ -151,7 +164,7 @@ header nav {
    }
 
    /* changing color of menu icon  */
-   .colorChange {
+   .hamIcon {
       color: var(--white);
    }
 
@@ -163,7 +176,6 @@ header nav {
    .scrolled {
       padding: 1.5rem 2rem;
    }
-
 
    .backdrop {
       display: block;
@@ -182,11 +194,5 @@ header nav {
    .backdrop.show {
       opacity: 1;
       pointer-events: auto;
-   }
-}
-
-@media (max-width: 1199.98px) {
-   .navLinks {
-      gap: 1.5rem;
    }
 }

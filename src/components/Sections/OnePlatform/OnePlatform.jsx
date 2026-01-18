@@ -11,7 +11,7 @@ const OnePlatform = () => {
    const isValues = pathname === '/values';
    return (
       <>
-         <section>
+         <section className={styles.onePlatformWrap}>
             <div
                className={clsx(styles.onePlatform, "container")}
                style={isValues ? { marginTop: '8rem', marginBottom: '4rem' } : {}}
@@ -44,7 +44,7 @@ const OnePlatform = () => {
                      </div>
                   </div>
 
-                  <div className="image">
+                  <div className="d-none d-lg-block">
                      <img src={img} alt="img" className={styles.onePlatformImg} />
                   </div>
 

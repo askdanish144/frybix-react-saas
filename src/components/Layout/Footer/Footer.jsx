@@ -8,7 +8,7 @@ import { useRef } from "react";
 
 const Footer = () => {
   const { pathname } = useLocation();
-  const newsLetterRef = useRef(); 
+  const newsLetterRef = useRef();
 
   const handleOnClick = (link) => {
     if (pathname === link) {
@@ -20,23 +20,27 @@ const Footer = () => {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault(); 
-    newsLetterRef.current.value = ""; 
+    event.preventDefault();
+    newsLetterRef.current.value = "";
   }
 
   return (
     <>
       <footer className="container-fluid">
         <div className="container">
+          
+          <div className={clsx(styles.footerContent, "row g-5")}>
 
-          <div className={clsx(styles.footerContent, "row row-cols-5")}>
-
-            <div className="col">
+            <div className="col-md-12 col-lg-3">
               <div className={styles.logoAndContact}>
 
                 <div className={styles.logo}>
                   <img src={logo} alt="logo" />
                   <h3>FryBix</h3>
+                </div>
+
+                <div className={styles.footerPara}>
+                  <p>FryBix helps teams streamline workflows and boost productivity.</p>
                 </div>
 
                 <div className={styles.contacts}>
@@ -55,7 +59,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="col">
+            <div className="col-6 col-sm-4 col-lg-2">
 
               <div className={styles.links}>
                 <h3>Links</h3>
@@ -69,7 +73,7 @@ const Footer = () => {
 
             </div>
 
-            <div className="col">
+            <div className="col-6 col-sm-4 col-lg-2">
               <div className={styles.legalLinks}>
                 <h3>Legal</h3>
                 <ul className={styles.listList}>
@@ -80,7 +84,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="col">
+            <div className="col-4 col-sm-4 col-lg-2">
               <div className={styles.productLinks}>
                 <h3>Product</h3>
                 <ul className={styles.listList}>
@@ -91,11 +95,11 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="col">
+            <div className="col-12 col-lg-3">
               <div className={styles.newsLetter}>
                 <h3>NewsLetter</h3>
                 <form className={styles.mailInput} onSubmit={handleSubmit}>
-                  <input type="email" placeholder="user@example.com" ref={newsLetterRef}/>
+                  <input type="email" placeholder="user@example.com" ref={newsLetterRef} />
                   <button type="submit">Subscribe</button>
                 </form>
               </div>

@@ -3,6 +3,8 @@ import logo from "../../../assets/logo/logo.svg";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { RiMenu3Line } from "react-icons/ri";
+import { MdClose } from "react-icons/md";
 
 const Navbar = () => {
   const { pathname } = useLocation();
@@ -47,7 +49,6 @@ const Navbar = () => {
     })
   }, [active]);
 
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -61,15 +62,14 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   return (
     <>
       <header>
-        <nav 
+        <nav
           className={clsx(scrolled && isHome ? styles.scrolled : null)}
           style={!isHome ? { backgroundColor: "var(--white)" } : {}}
         >
-          
+
           <Link className={styles.logo} to="/" onClick={() => handlePageScroll('/')}>
             <img src={logo} alt="logo" />
             <h2>FryBix</h2>
@@ -104,14 +104,28 @@ const Navbar = () => {
               onClick={() => handlePageScroll('/values')}>Values</Link>
             </li>
 
-            <li><Link
-              to="/contact"
-              className={clsx(!scrolled && isHome ? styles.contact : styles.contactScrolled)}>Contact</Link>
+            <li>
+              <Link
+                to="/contact"
+                className={clsx(!scrolled && isHome ? styles.contact : styles.contactScrolled)}
+              >
+                Contact
+              </Link>
             </li>
           </ul>
 
           <span onClick={() => setActive(prev => !prev)} id={styles.menuIcon}>
-            <i className={clsx(active ? "ri-close-large-line" : "ri-menu-3-line", active ? styles.colorChange : "")}></i>
+            {
+              active ?
+                <MdClose className={styles.hamIcon} />
+                :
+                < RiMenu3Line
+                  className={styles.hamIcon}
+                  style={{
+                    color: scrolled || !isHome ? 'black' : undefined
+                  }}
+                />
+            }
           </span>
 
           {/* Backdrop with transition */}

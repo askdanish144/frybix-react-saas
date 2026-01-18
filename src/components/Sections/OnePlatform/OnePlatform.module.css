@@ -1,10 +1,14 @@
+.onePlatformWrap {
+   padding-top: 2rem;
+}
+
 .onePlatform {
 
    h2 {
       font-family: "Zalando Sans Expanded", sans-serif;
       font-weight: 700;
       text-align: center;
-      font-size: 2.5rem;
+      font-size: clamp(1rem, 1.5rem + 2vw, 2.5rem);
       text-transform: capitalize;
       margin: 3rem 0;
    }
@@ -54,5 +58,27 @@
       position: absolute;
       right: -180px;
       z-index: 2;
+   }
+}
+
+/* Responsiveness */
+@media (max-width: 1199.98px) {
+   .onePlatformImg {
+      right: -230px !important;
+      width: 70%;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .onePlatformContent {
+      justify-content: center !important;
+   }
+
+   .cards {
+      align-items: center;
+   }
+
+   .cardItem {
+      width: 95% !important;
    }
 }

@@ -42,7 +42,7 @@ const LogoSlider = () => {
          setIsMobile(window.innerWidth <= breakPoint ? true : false);
       }
 
-      handleState(); // Set initial value..
+      handleState();
       window.addEventListener("resize", handleState);
 
       return () => window.removeEventListener("resize", handleState);
@@ -57,8 +57,6 @@ const LogoSlider = () => {
                   <p>Trusted By 20,000+ Clients</p>
                   <h2>They Trust Us.</h2>
                </div>
-
-               {/* Using marquee instead of carousel for continuous, non-snapping animation */}
 
                <div className={styles.testimonialCardsWrapper}>
                   <div className={styles.testimonialCards}>
@@ -76,11 +74,6 @@ const LogoSlider = () => {
                                  <div className={styles.cardImg}>
                                     <img src={obj.img} alt="img" />
                                  </div>
-
-                                 {/* <div className={styles.cardText}>
-                                    <h3 className={styles.cardHeading}>{obj.name}</h3>
-                                    <p className={styles.cardDesc}>{obj.desc}</p>
-                                 </div> */}
                               </div>
                            ))
                         }
@@ -102,11 +95,6 @@ const LogoSlider = () => {
                                  <div className={styles.cardImg}>
                                     <img src={obj.img} alt="img" />
                                  </div>
-
-                                 {/* <div className={styles.cardText}>
-                                    <h3 className={styles.cardHeading}>{obj.name}</h3>
-                                    <p className={styles.cardDesc}>{obj.desc}</p>
-                                 </div> */}
                               </div>
                            ))
                         }

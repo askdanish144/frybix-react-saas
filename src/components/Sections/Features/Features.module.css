@@ -1,8 +1,8 @@
 .features {
-   .featureDivider{
+   .featureDivider {
       margin: 1rem 0 2rem 0;
    }
-   
+
    .feature {
       padding: 2rem 0;
    }
@@ -46,5 +46,12 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+   }
+}
+
+@media (max-width: 767.98px) {
+   .features {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
    }
 }
