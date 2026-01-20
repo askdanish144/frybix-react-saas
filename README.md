@@ -14,7 +14,7 @@ https://frybix-web.netlify.app
 
 ## 📸 Preview
 
-![FryBix Website Screenshot](./Screenshot.png)
+![FryBix Website Screenshot](./Preview.png)
 
 ---
 
