@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import styles from "./PageNotFound.module.css";
 import Navbar from '../../components/Layout/Navbar/Navbar';
 import Footer from '../../components/Layout/Footer/Footer';
+import { useEffect } from 'react';
 
 const PageNotFound = () => {
    const { pathname } = useLocation();
@@ -9,6 +10,10 @@ const PageNotFound = () => {
    const handleClick = () => {
       window.history.back();
    }
+
+   useEffect(() => {
+      document.title = "FryBix - Page Not Found";
+   }, []);
    return (
       <>
          <Navbar />

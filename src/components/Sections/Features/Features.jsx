@@ -4,10 +4,16 @@ import img1 from '../../../assets/features/group-1.svg';
 import img2 from '../../../assets/features/group-2.svg';
 import img3 from '../../../assets/features/group-3.svg';
 import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Features = () => {
    const { pathname } = useLocation();
    const isFeatures = pathname === '/features';
+
+   useEffect(() => {
+      document.title = "FryBix - Features";
+   }, []);
+
    return (
       <>
          <section

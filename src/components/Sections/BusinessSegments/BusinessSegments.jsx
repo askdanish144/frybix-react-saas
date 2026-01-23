@@ -4,6 +4,7 @@ import cardImg1 from '../../../assets/onePlatform/1.svg';
 import cardImg2 from '../../../assets/onePlatform/2.svg';
 import cardImg3 from '../../../assets/onePlatform/3.svg';
 import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const cardsData = [
    {
@@ -41,6 +42,10 @@ const cardsData = [
 const BusinessSegments = () => {
    const { pathname } = useLocation();
    const isSegments = pathname === '/segments';
+
+   useEffect(() => {
+      document.title = "FryBix - Business Segments";
+   }, []);
 
    return (
       <>

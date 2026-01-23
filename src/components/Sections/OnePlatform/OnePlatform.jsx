@@ -5,10 +5,16 @@ import cardImg1 from '../../../assets/onePlatform/1.svg';
 import cardImg2 from '../../../assets/onePlatform/2.svg';
 import cardImg3 from '../../../assets/onePlatform/3.svg';
 import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const OnePlatform = () => {
    const { pathname } = useLocation();
    const isValues = pathname === '/values';
+
+   useEffect(() => {
+      document.title = "FryBix - Values";
+   }, []);
+
    return (
       <>
          <section className={styles.onePlatformWrap}>
